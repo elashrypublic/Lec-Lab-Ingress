@@ -144,6 +144,92 @@ curl --resolve "myapp.local:80:192.168.67.2" http://myapp.local/anything
 
 ---
 
+## 🧪 Lab Answers (Added)
+
+### 🚀 Part 1
+
+```
+IngressClass name:
+nginx
+
+Why are the backend Services ClusterIP and not NodePort?
+Because Ingress exposes services externally, so backend services remain internal (ClusterIP)
+```
+
+---
+
+### 🔀 Part 2
+
+```
+ADDRESS:
+192.168.49.2
+
+Why does one Ingress replace 2 NodePort Services?
+Because Ingress routes traffic to multiple services using a single entry point
+```
+
+---
+
+### 🧠 Task 3
+
+```
+What response did /random return?
+404 Not Found
+
+How many rules does the routing table show?
+3
+```
+
+---
+
+### 🌐 Part 3
+
+```
+How many Host entries in describe output?
+3
+
+What happened with the unknown host?
+404 Not Found
+
+Difference between path-based and host-based routing:
+Path-based: routing by URL path
+Host-based: routing by domain name
+```
+
+---
+
+### ⚙️ Task 5
+
+```
+Did /api/users work?
+Yes
+
+Did /admin/settings work? — why?
+No
+Because pathType Exact only matches /admin
+
+When would you use pathType: Exact?
+When strict matching is required
+```
+
+---
+
+### 🔥 Task 6
+
+```
+Which service responded to /anything?
+webapp-svc
+
+Which service responded to http://myapp.local?
+webapp-svc
+
+Real-world use case for defaultBackend:
+Fallback service for unmatched requests
+```
+
+---
+
+
 ## 🎯 What I Learned
 
 ✔ Ingress Controller setup
